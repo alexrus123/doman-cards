@@ -17,24 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-LF-9vu">
-                                <rect key="frame" x="131" y="144" width="54" height="30"/>
-                                <state key="normal" title="Animals"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-LF-9vu">
+                                <rect key="frame" x="20" y="3.5" width="240" height="84.5"/>
+                                <state key="normal" title="Animals">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="kjZ-ha-xeS" kind="show" identifier="showCard" id="xTL-rk-JP8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-TY-aJf">
-                                <rect key="frame" x="398" y="144" width="45" height="30"/>
-                                <state key="normal" title="Colors"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-TY-aJf">
+                                <rect key="frame" x="268" y="3.5" width="280" height="84.5"/>
+                                <state key="normal" title="Colors">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="wkj-TY-aJf" secondAttribute="trailing" constant="125" id="2MM-Ep-jLd"/>
+                            <constraint firstAttribute="trailing" secondItem="wkj-TY-aJf" secondAttribute="trailing" constant="20" id="2MM-Ep-jLd"/>
                             <constraint firstItem="wkj-TY-aJf" firstAttribute="baseline" secondItem="wsu-LF-9vu" secondAttribute="baseline" id="FnA-hU-CU9"/>
-                            <constraint firstItem="wsu-LF-9vu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-1" id="P42-QM-d2X"/>
-                            <constraint firstItem="wsu-LF-9vu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="131" id="hdk-BD-9R8"/>
+                            <constraint firstItem="wsu-LF-9vu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-114.25" id="P42-QM-d2X"/>
+                            <constraint firstItem="wsu-LF-9vu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hdk-BD-9R8"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -58,12 +62,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD VIEW CONTROLLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDy-UB-VW2">
-                                <rect key="frame" x="182" y="149" width="205" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-M4-5q1">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
                                 <items>
@@ -76,15 +74,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-xA-QuI">
+                                <rect key="frame" x="136" y="71" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-41-Kd1">
+                                <rect key="frame" x="182" y="120" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="YDy-UB-VW2" firstAttribute="centerY" secondItem="Uhv-Mc-KbH" secondAttribute="centerY" id="21V-6L-5wh"/>
-                            <constraint firstItem="YDy-UB-VW2" firstAttribute="centerX" secondItem="Uhv-Mc-KbH" secondAttribute="centerX" id="z7e-Jb-ax1"/>
-                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="testimg" destination="yS2-41-Kd1" id="6RK-Zf-Uhc"/>
+                        <outlet property="tlabel" destination="Vsx-xA-QuI" id="aRC-um-kGT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSG-hi-1JD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
