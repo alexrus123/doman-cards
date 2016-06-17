@@ -22,7 +22,17 @@ class Card_ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         navTitle.title = "Cards: " + toPass
         tlabel.text = toPass
-        testimg.image = UIImage(named: "images/flAnimals/alligator")
+        testimg.image = UIImage(named: "animals-alligator")
+        getF()
+    }
+    
+    func getF(){
+        
+        let filemanager:NSFileManager = NSFileManager()
+        let files = filemanager.enumeratorAtPath(NSHomeDirectory())
+        while let file = files?.nextObject() {
+            print(file)
+        }
     }
     
     override func didReceiveMemoryWarning() {
