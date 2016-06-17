@@ -10,20 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var Animals: UIButton!
+    @IBOutlet weak var bttnAnimals: UIButton!
     @IBOutlet weak var bttnColor: UIButton!
-    @IBOutlet weak var testLabel: UILabel!
+    var str: String!
     
     @IBAction func bttnColor(sender: AnyObject) {
-        testLabel.text = "tested"
-        print(Animals.currentTitle)
-        performSegueWithIdentifier("showCard", sender: self)
+        print(sender.currentTitle)
+        str = sender.currentTitle
+        performSegueWithIdentifier("card-view", sender: self)
+    }
+    
+    @IBAction func bttnAnimals(sender: AnyObject) {
+        print(sender.currentTitle)
+        str = sender.currentTitle
+        performSegueWithIdentifier("card-view", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "showCard") {
+        if (segue.identifier == "card-view") {
             let svc = segue.destinationViewController as! Card_ViewController;
-            svc.toPass = "Colors"
+            svc.toPass = str
         }
     }
     

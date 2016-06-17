@@ -12,6 +12,7 @@ import UIKit
 
 class Card_ViewController: UIViewController {
     
+    @IBOutlet var navTitle: UINavigationItem!
     @IBOutlet weak var tlabel: UILabel!
     @IBOutlet weak var testimg: UIImageView!
     var toPass:String!
@@ -19,8 +20,9 @@ class Card_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        navTitle.title = "Cards: " + toPass
         tlabel.text = toPass
-        testimg.image = UIImage(named: "alligator")
+        testimg.image = UIImage(named: "images/flAnimals/alligator")
     }
     
     override func didReceiveMemoryWarning() {
