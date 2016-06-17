@@ -14,11 +14,12 @@ class Card_ViewController: UIViewController {
     
     @IBOutlet weak var tlabel: UILabel!
     @IBOutlet weak var testimg: UIImageView!
+    var toPass:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tlabel.text = "test test 111"
+        tlabel.text = toPass
         testimg.image = UIImage(named: "alligator")
     }
     

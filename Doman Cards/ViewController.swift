@@ -10,6 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var Animals: UIButton!
+    @IBOutlet weak var bttnColor: UIButton!
+    @IBOutlet weak var testLabel: UILabel!
+    
+    @IBAction func bttnColor(sender: AnyObject) {
+        testLabel.text = "tested"
+        print(Animals.currentTitle)
+        performSegueWithIdentifier("showCard", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "showCard") {
+            let svc = segue.destinationViewController as! Card_ViewController;
+            svc.toPass = "Colors"
+        }
+    }
+    
+    /*
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!, str:String) {
+        if (segue.identifier == "showCard") {
+            let svc = segue.destinationViewController as! Card_ViewController;
+            svc.toPass = "Colors"
+        }
+    }
+    */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

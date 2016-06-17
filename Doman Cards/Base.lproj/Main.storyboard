@@ -26,17 +26,24 @@
                                     <segue destination="kjZ-ha-xeS" kind="show" identifier="showCard" id="xTL-rk-JP8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-TY-aJf">
-                                <rect key="frame" x="268" y="3.5" width="280" height="84.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKh-AZ-D11">
+                                <rect key="frame" x="263" y="149" width="199" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gz-1Wm">
+                                <rect key="frame" x="268" y="3" width="300" height="85"/>
                                 <state key="normal" title="Colors">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="bttnColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZe-XC-9AL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="wkj-TY-aJf" secondAttribute="trailing" constant="20" id="2MM-Ep-jLd"/>
-                            <constraint firstItem="wkj-TY-aJf" firstAttribute="baseline" secondItem="wsu-LF-9vu" secondAttribute="baseline" id="FnA-hU-CU9"/>
                             <constraint firstItem="wsu-LF-9vu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-114.25" id="P42-QM-d2X"/>
                             <constraint firstItem="wsu-LF-9vu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hdk-BD-9R8"/>
                         </constraints>
@@ -45,6 +52,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="Animals" destination="wsu-LF-9vu" id="Ff7-wh-GxJ"/>
+                        <outlet property="testLabel" destination="oKh-AZ-D11" id="pWf-nT-aJ8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
