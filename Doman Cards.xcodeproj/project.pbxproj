@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FEE309421D1A541200D9F6B3 /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE309411D1A541200D9F6B3 /* Animals.swift */; };
 		FEE6F6F91D11213100319571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F6F81D11213100319571 /* AppDelegate.swift */; };
 		FEE6F6FB1D11213100319571 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F6FA1D11213100319571 /* ViewController.swift */; };
 		FEE6F6FE1D11213100319571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE6F6FC1D11213100319571 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FEE309411D1A541200D9F6B3 /* Animals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animals.swift; sourceTree = "<group>"; };
 		FEE6F6F51D11213000319571 /* Doman Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doman Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE6F6F81D11213100319571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE6F6FA1D11213100319571 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				FEE6F7041D11213100319571 /* LaunchScreen.storyboard */,
 				FEE6F7071D11213100319571 /* Info.plist */,
 				FEE6F6FF1D11213100319571 /* Doman_Cards.xcdatamodeld */,
+				FEE309411D1A541200D9F6B3 /* Animals.swift */,
 			);
 			path = "Doman Cards";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE309421D1A541200D9F6B3 /* Animals.swift in Sources */,
 				FEE6F72A1D1134E800319571 /* Card-view.swift in Sources */,
 				FEE6F6FB1D11213100319571 /* ViewController.swift in Sources */,
 				FEE6F7011D11213100319571 /* Doman_Cards.xcdatamodeld in Sources */,
@@ -497,6 +501,7 @@
 				FEE6F7221D11213100319571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEE6F7231D11213100319571 /* Build configuration list for PBXNativeTarget "Doman CardsTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +510,7 @@
 				FEE6F7251D11213100319571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEE6F7261D11213100319571 /* Build configuration list for PBXNativeTarget "Doman CardsUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +519,7 @@
 				FEE6F7281D11213100319571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
