@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Main-view-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Doman_Cards" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-LF-9vu" userLabel="bttnAnimals">
-                                <rect key="frame" x="20" y="3.5" width="240" height="84.5"/>
+                                <rect key="frame" x="20" y="158" width="240" height="85"/>
                                 <state key="normal" title="Animals">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,8 +26,11 @@
                                     <action selector="bttnAnimals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA5-tL-bqm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gz-1Wm" userLabel="bttnColors">
-                                <rect key="frame" x="268" y="3" width="300" height="85"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gz-1Wm" userLabel="bttnColors">
+                                <rect key="frame" x="268" y="157" width="300" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="TCD-67-zV3"/>
+                                </constraints>
                                 <state key="normal" title="Colors">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,11 +38,30 @@
                                     <action selector="bttnColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZe-XC-9AL"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPD-T2-njK">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="c21-7n-ng2">
+                                        <barButtonItem key="rightBarButtonItem" image="icon-cast-identified" id="qYw-eV-0Jn">
+                                            <connections>
+                                                <action selector="chooseDevice:" destination="BYZ-38-t0r" id="6r4-hE-8WS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wsu-LF-9vu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-114.25" id="P42-QM-d2X"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="H5m-hA-Ayp"/>
+                            <constraint firstItem="wsu-LF-9vu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40.25" id="P42-QM-d2X"/>
+                            <constraint firstItem="HOb-Gz-1Wm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="137" id="QDQ-7f-U6M"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="trailing" secondItem="HOb-Gz-1Wm" secondAttribute="trailing" id="Yag-NE-WQD"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cE6-st-2cJ"/>
                             <constraint firstItem="wsu-LF-9vu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hdk-BD-9R8"/>
+                            <constraint firstAttribute="trailing" secondItem="HOb-Gz-1Wm" secondAttribute="trailing" id="jMl-FA-hxx"/>
+                            <constraint firstItem="HOb-Gz-1Wm" firstAttribute="leading" secondItem="wsu-LF-9vu" secondAttribute="trailing" constant="8" symbolic="YES" id="nFL-Zr-62S"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HOb-Gz-1Wm" secondAttribute="bottom" constant="34" id="rJ1-0u-8Uq"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -47,6 +69,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="googleCastButton" destination="qYw-eV-0Jn" id="ZcV-yl-L8t"/>
                         <segue destination="kjZ-ha-xeS" kind="show" identifier="card-view" id="7XM-Hu-zoW"/>
                     </connections>
                 </viewController>
@@ -103,4 +126,7 @@
             <point key="canvasLocation" x="962" y="-69"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-cast-identified" width="24" height="24"/>
+    </resources>
 </document>
