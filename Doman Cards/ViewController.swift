@@ -26,11 +26,11 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     private lazy var btnImageselected:UIImage = {
         return UIImage(named: "icon-cast-connected.png")!
     }()
-    /*
+    
     private lazy var textChannel:TextChannel = {
-        return TextChannel(namespace: "urn:x-cast:com.google.cast.sample.helloworld")
+        return TextChannel(namespace: "urn:x-cast:com.google.cast.sample.helloworld1")
     }()
- */
+    
     private var deviceScanner:GCKDeviceScanner?
     private var deviceManager:GCKDeviceManager?
     private var mediaInformation:GCKMediaInformation?
@@ -100,6 +100,13 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
         deviceManager = nil
     }
     
+    func showError(error: NSError) {
+        let alert = UIAlertController(title: "Error", message: error.description,
+                                      preferredStyle: UIAlertControllerStyle.Alert);
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
         if let deviceScanner = deviceScanner {
             deviceScanner.passiveScan = true
@@ -153,11 +160,8 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     @IBAction func chooseDevice(sender:AnyObject) {
         if (selectedDevice == nil) {
             // [START showing-devices]
-            let sheet : UIActionSheet = // [START_EXCLUDE]
-                UIActionSheet(title: "Connect to Device",
-                              delegate: self,
-                              cancelButtonTitle: nil,
-                              destructiveButtonTitle: nil)
+            let sheet : UIActionSheet = UIActionSheet(title: "Connect to Device", delegate: self, cancelButtonTitle: nil, destructiveButtonTitle:nil)
+            
             // [END_EXCLUDE]
             if let deviceScanner = deviceScanner {
                 deviceScanner.passiveScan = false
@@ -177,14 +181,13 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
         } else {
             let friendlyName = "Casting to \(selectedDevice!.friendlyName)";
             
-            let sheet : UIActionSheet = UIActionSheet(title: friendlyName,
-                                                      delegate: self, cancelButtonTitle: nil,
-                                                      destructiveButtonTitle: nil);
+            let sheet : UIActionSheet = UIActionSheet(title: friendlyName, delegate: self, cancelButtonTitle: nil, destructiveButtonTitle: nil);
+            
             var buttonIndex = 0;
             
             if let info = mediaInformation {
                 sheet.addButtonWithTitle((info.metadata.objectForKey(kGCKMetadataKeyTitle) as! String));
-                buttonIndex++;
+                buttonIndex += 1;
             }
             
             // Offer disconnect option.
@@ -195,6 +198,57 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
             
             sheet.showInView(self.view);
         }
+    }
+    
+    // [START launch-application]
+    // MARK: GCKDeviceManagerDelegate
+    func deviceManagerDidConnect(deviceManager: GCKDeviceManager!) {
+        print("Connected.");
+        
+        // [START_EXCLUDE silent]
+        updateButtonStates();
+        // [END_EXCLUDE]
+        deviceManager.launchApplication(kReceiverAppID);
+    }
+    // [END launch-application]
+    
+    func deviceManager(deviceManager: GCKDeviceManager!,
+                       didConnectToCastApplication
+        applicationMetadata: GCKApplicationMetadata!,
+        sessionID: String!,
+        launchedApplication: Bool) {
+        print("Application has launched.");
+        deviceManager.addChannel(self.textChannel)
+    }
+    
+    func deviceManager(deviceManager: GCKDeviceManager!,
+                       didFailToConnectToApplicationWithError error: NSError!) {
+        print("Received notification that device failed to connect to application.");
+        
+        showError(error);
+        deviceDisconnected();
+        updateButtonStates();
+    }
+    
+    func deviceManager(deviceManager: GCKDeviceManager!,
+                       didFailToConnectWithError error: NSError!) {
+        print("Received notification that device failed to connect.");
+        
+        showError(error);
+        deviceDisconnected();
+        updateButtonStates();
+    }
+    
+    func deviceManager(deviceManager: GCKDeviceManager!,
+                       didDisconnectWithError error: NSError!) {
+        print("Received notification that device disconnected.");
+        
+        if (error != nil) {
+            showError(error)
+        }
+        
+        deviceDisconnected();
+        updateButtonStates();
     }
     
     override func didReceiveMemoryWarning() {
