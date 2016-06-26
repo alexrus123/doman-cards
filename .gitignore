@@ -1,1 +1,5 @@
 *.framework
+
+GoogleCast.framework
+
+.DS_Store
