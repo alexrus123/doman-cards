@@ -10,38 +10,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Doman_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="fhg-CB-rLq"/>
+                        <viewControllerLayoutGuide type="bottom" id="iPj-F8-Qh9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-LF-9vu" userLabel="bttnAnimals">
-                                <rect key="frame" x="20" y="158" width="240" height="85"/>
-                                <state key="normal" title="Animals">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="bttnAnimals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA5-tL-bqm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gz-1Wm" userLabel="bttnColors">
-                                <rect key="frame" x="268" y="157" width="300" height="85"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="TCD-67-zV3"/>
-                                </constraints>
-                                <state key="normal" title="Colors">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="bttnColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZe-XC-9AL"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPD-T2-njK">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="c21-7n-ng2">
+                                    <navigationItem title="Flash Cards" id="c21-7n-ng2">
                                         <barButtonItem key="rightBarButtonItem" image="icon-cast-identified" id="qYw-eV-0Jn">
                                             <connections>
                                                 <action selector="chooseDevice:" destination="BYZ-38-t0r" id="6r4-hE-8WS"/>
@@ -50,40 +29,67 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-8c-YRf">
+                                <rect key="frame" x="218" y="44" width="300" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-LF-9vu" userLabel="bttnAnimals">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="JsB-39-Zdk"/>
+                                            <constraint firstAttribute="height" constant="100" id="uWv-bv-hij"/>
+                                        </constraints>
+                                        <state key="normal" title="Animals">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bttnAnimals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA5-tL-bqm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gz-1Wm" userLabel="bttnColors">
+                                        <rect key="frame" x="0.0" y="100" width="300" height="100"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ieF-W9-qvW"/>
+                                        </constraints>
+                                        <state key="normal" title="Colors">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bttnColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZe-XC-9AL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pPD-T2-njK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="H5m-hA-Ayp"/>
-                            <constraint firstItem="wsu-LF-9vu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40.25" id="P42-QM-d2X"/>
-                            <constraint firstItem="HOb-Gz-1Wm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="137" id="QDQ-7f-U6M"/>
-                            <constraint firstItem="pPD-T2-njK" firstAttribute="trailing" secondItem="HOb-Gz-1Wm" secondAttribute="trailing" id="Yag-NE-WQD"/>
-                            <constraint firstItem="pPD-T2-njK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cE6-st-2cJ"/>
-                            <constraint firstItem="wsu-LF-9vu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hdk-BD-9R8"/>
-                            <constraint firstAttribute="trailing" secondItem="HOb-Gz-1Wm" secondAttribute="trailing" id="jMl-FA-hxx"/>
-                            <constraint firstItem="HOb-Gz-1Wm" firstAttribute="leading" secondItem="wsu-LF-9vu" secondAttribute="trailing" constant="8" symbolic="YES" id="nFL-Zr-62S"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HOb-Gz-1Wm" secondAttribute="bottom" constant="34" id="rJ1-0u-8Uq"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2cP-Lt-fT9"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2y8-ga-W7P"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="bottom" secondItem="1pm-8c-YRf" secondAttribute="top" id="g31-KJ-Ayd"/>
+                            <constraint firstAttribute="trailing" secondItem="pPD-T2-njK" secondAttribute="trailing" id="jIN-0a-Fmr"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="googleCastButton" destination="qYw-eV-0Jn" id="ZcV-yl-L8t"/>
-                        <segue destination="kjZ-ha-xeS" kind="show" identifier="card-view" id="7XM-Hu-zoW"/>
+                        <segue destination="kjZ-ha-xeS" kind="presentation" identifier="card-view" id="7XM-Hu-zoW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="420"/>
+            <point key="canvasLocation" x="277" y="419"/>
         </scene>
         <!--Card-view-->
         <scene sceneID="ecL-TL-jnA">
             <objects>
                 <viewController title="Card-view" id="kjZ-ha-xeS" customClass="Card_ViewController" customModule="Doman_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Uww-Hz-Dl6"/>
-                        <viewControllerLayoutGuide type="bottom" id="oHG-wy-c2C"/>
+                        <viewControllerLayoutGuide type="top" id="el2-Yn-XuT"/>
+                        <viewControllerLayoutGuide type="bottom" id="W2v-6T-1pB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uhv-Mc-KbH">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
@@ -95,7 +101,7 @@
                                     <navigationItem title="Cards" id="wW1-tw-FCh" userLabel="navTitle">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="cu4-o1-mtw">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="lat-i8-tCa"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="lat-i8-tCa"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -123,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSG-hi-1JD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="-69"/>
+            <point key="canvasLocation" x="961.99999999999989" y="-68.999999999999986"/>
         </scene>
     </scenes>
     <resources>
