@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     private let kDisconnectTitle = "Disconnect"
     // Publicly available receiver to demonstrate sending messages - replace this with your
     // own custom app ID.
-    private let kReceiverAppID = "794B7BBF"
+    private let kReceiverAppID = kGCKMediaDefaultReceiverApplicationID
     private lazy var btnImage:UIImage = {
         return UIImage(named: "icon-cast-identified.png")!
     }()
