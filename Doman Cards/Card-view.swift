@@ -35,7 +35,7 @@ class Card_ViewController: UIViewController {
         navTitle.title = "Cards: " + toPass
         //tlabel.text = toPass
         //testimg.image = UIImage(named: "Wolf")
-        displayIndex(Animals().returnArray(0))
+        caseToDisplay(toPass)
     }
     
     func swiped(gesture: UIGestureRecognizer) {
@@ -49,8 +49,8 @@ class Card_ViewController: UIViewController {
                 if imageIndex < 0 {
                     imageIndex = 5
                 }
-                displayIndex(Animals().returnArray(imageIndex))
-                //testimg.image = UIImage(named: Animals().returnArray(imageIndex))
+                caseToDisplay(toPass)
+                
             case UISwipeGestureRecognizerDirection.Left:
                 print("User swiped Left")
                 imageIndex += 1
@@ -58,11 +58,25 @@ class Card_ViewController: UIViewController {
                 if imageIndex > 5 {
                     imageIndex = 0
                 }
-                displayIndex(Animals().returnArray(imageIndex))
-                //testimg.image = UIImage(named: Animals().returnArray(imageIndex))
+                caseToDisplay(toPass)
             default:
                 break //stops the code/codes nothing.
             }
+        }
+    }
+    
+    func caseToDisplay(str: String){
+        switch str {
+        case "Animals":
+            displayIndex(Utils().returnArray(Animals().animalsArray, index: imageIndex))
+        case "Fruits":
+            displayIndex(Utils().returnArray(Fruits().fruitsArray, index: imageIndex))
+        case "Veggie":
+            displayIndex(Utils().returnArray(Veggie().veggieArray, index: imageIndex))
+        case "Colors":
+            print("")
+        default:
+            print(str)
         }
     }
     

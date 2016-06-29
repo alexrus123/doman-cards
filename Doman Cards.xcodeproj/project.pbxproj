@@ -12,6 +12,11 @@
 		FE3BE9F41D1FA0C3009BA589 /* receiver.html in Resources */ = {isa = PBXBuildFile; fileRef = FE3BE9F31D1FA0C3009BA589 /* receiver.html */; };
 		FE3BE9F61D1FA0FD009BA589 /* TextChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3BE9F51D1FA0FD009BA589 /* TextChannel.swift */; };
 		FE5466731D1E6ADD0090D938 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F6FA1D11213100319571 /* ViewController.swift */; };
+		FE7746911D23973C006C3D2C /* Fruits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7746901D23973C006C3D2C /* Fruits.swift */; };
+		FE7746931D239F2F006C3D2C /* Veggie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7746921D239F2F006C3D2C /* Veggie.swift */; };
+		FE7746951D239F50006C3D2C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7746941D239F50006C3D2C /* Colors.swift */; };
+		FE7746971D239F6C006C3D2C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7746961D239F6C006C3D2C /* Utils.swift */; };
+		FE7746991D23A2C0006C3D2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7746981D23A2C0006C3D2C /* Assets.xcassets */; };
 		FEE309421D1A541200D9F6B3 /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE309411D1A541200D9F6B3 /* Animals.swift */; };
 		FEE309461D1A798600D9F6B3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE309451D1A798600D9F6B3 /* Accelerate.framework */; };
 		FEE309481D1A798B00D9F6B3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE309471D1A798B00D9F6B3 /* AudioToolbox.framework */; };
@@ -27,7 +32,6 @@
 		FEE6F6F91D11213100319571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F6F81D11213100319571 /* AppDelegate.swift */; };
 		FEE6F6FE1D11213100319571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE6F6FC1D11213100319571 /* Main.storyboard */; };
 		FEE6F7011D11213100319571 /* Doman_Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F6FF1D11213100319571 /* Doman_Cards.xcdatamodeld */; };
-		FEE6F7031D11213100319571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE6F7021D11213100319571 /* Assets.xcassets */; };
 		FEE6F7061D11213100319571 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE6F7041D11213100319571 /* LaunchScreen.storyboard */; };
 		FEE6F7111D11213100319571 /* Doman_CardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F7101D11213100319571 /* Doman_CardsTests.swift */; };
 		FEE6F71C1D11213100319571 /* Doman_CardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F71B1D11213100319571 /* Doman_CardsUITests.swift */; };
@@ -57,6 +61,11 @@
 		FE3BE9F31D1FA0C3009BA589 /* receiver.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = receiver.html; sourceTree = "<group>"; };
 		FE3BE9F51D1FA0FD009BA589 /* TextChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextChannel.swift; sourceTree = "<group>"; };
 		FE54666C1D1E64000090D938 /* Doman Cards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Doman Cards-Bridging-Header.h"; sourceTree = "<group>"; };
+		FE7746901D23973C006C3D2C /* Fruits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fruits.swift; sourceTree = "<group>"; };
+		FE7746921D239F2F006C3D2C /* Veggie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Veggie.swift; sourceTree = "<group>"; };
+		FE7746941D239F50006C3D2C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FE7746961D239F6C006C3D2C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FE7746981D23A2C0006C3D2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEE309411D1A541200D9F6B3 /* Animals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animals.swift; sourceTree = "<group>"; };
 		FEE309451D1A798600D9F6B3 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		FEE309471D1A798B00D9F6B3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -74,7 +83,6 @@
 		FEE6F6FA1D11213100319571 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FEE6F6FD1D11213100319571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEE6F7001D11213100319571 /* Doman_Cards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Doman_Cards.xcdatamodel; sourceTree = "<group>"; };
-		FEE6F7021D11213100319571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEE6F7051D11213100319571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEE6F7071D11213100319571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE6F70C1D11213100319571 /* Doman CardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Doman CardsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,13 +179,17 @@
 				FE3BE9F51D1FA0FD009BA589 /* TextChannel.swift */,
 				FEE6F7291D1134E800319571 /* Card-view.swift */,
 				FEE6F6FC1D11213100319571 /* Main.storyboard */,
-				FEE6F7021D11213100319571 /* Assets.xcassets */,
+				FE7746981D23A2C0006C3D2C /* Assets.xcassets */,
 				FEE309591D1A7A7600D9F6B3 /* CastFrameworkAssets.xcassets */,
 				FEE6F7041D11213100319571 /* LaunchScreen.storyboard */,
 				FEE6F7071D11213100319571 /* Info.plist */,
 				FEE6F6FF1D11213100319571 /* Doman_Cards.xcdatamodeld */,
 				FEE309411D1A541200D9F6B3 /* Animals.swift */,
 				FE54666C1D1E64000090D938 /* Doman Cards-Bridging-Header.h */,
+				FE7746901D23973C006C3D2C /* Fruits.swift */,
+				FE7746921D239F2F006C3D2C /* Veggie.swift */,
+				FE7746941D239F50006C3D2C /* Colors.swift */,
+				FE7746961D239F6C006C3D2C /* Utils.swift */,
 			);
 			path = "Doman Cards";
 			sourceTree = "<group>";
@@ -309,7 +321,7 @@
 				FE3BE9F41D1FA0C3009BA589 /* receiver.html in Resources */,
 				FEE3095A1D1A7A7600D9F6B3 /* CastFrameworkAssets.xcassets in Resources */,
 				FEE6F7061D11213100319571 /* LaunchScreen.storyboard in Resources */,
-				FEE6F7031D11213100319571 /* Assets.xcassets in Resources */,
+				FE7746991D23A2C0006C3D2C /* Assets.xcassets in Resources */,
 				FEE6F6FE1D11213100319571 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,11 +347,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7746911D23973C006C3D2C /* Fruits.swift in Sources */,
+				FE7746951D239F50006C3D2C /* Colors.swift in Sources */,
 				FE3BE9F61D1FA0FD009BA589 /* TextChannel.swift in Sources */,
 				FE5466731D1E6ADD0090D938 /* ViewController.swift in Sources */,
 				FEE309421D1A541200D9F6B3 /* Animals.swift in Sources */,
+				FE7746971D239F6C006C3D2C /* Utils.swift in Sources */,
 				FEE6F72A1D1134E800319571 /* Card-view.swift in Sources */,
 				FEE6F7011D11213100319571 /* Doman_Cards.xcdatamodeld in Sources */,
+				FE7746931D239F2F006C3D2C /* Veggie.swift in Sources */,
 				FEE6F6F91D11213100319571 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

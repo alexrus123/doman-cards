@@ -30,7 +30,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-8c-YRf">
-                                <rect key="frame" x="218" y="44" width="300" height="200"/>
+                                <rect key="frame" x="218" y="44" width="300" height="300"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-LF-9vu" userLabel="bttnAnimals">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
@@ -46,17 +46,30 @@
                                             <action selector="bttnAnimals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA5-tL-bqm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gz-1Wm" userLabel="bttnColors">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gz-1Wm" userLabel="bttnFruits">
                                         <rect key="frame" x="0.0" y="100" width="300" height="100"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="ieF-W9-qvW"/>
                                         </constraints>
-                                        <state key="normal" title="Colors">
+                                        <state key="normal" title="Fruits">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="bttnColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZe-XC-9AL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS3-gl-t32" userLabel="bttnVeggie">
+                                        <rect key="frame" x="0.0" y="200" width="300" height="100"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="gFd-QJ-hMd"/>
+                                        </constraints>
+                                        <state key="normal" title="Veggie">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bttnVeggie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZB1-6k-uvp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,6 +88,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="bttnVeggie" destination="cS3-gl-t32" id="Mja-o0-haz"/>
                         <outlet property="googleCastButton" destination="qYw-eV-0Jn" id="ZcV-yl-L8t"/>
                         <segue destination="kjZ-ha-xeS" kind="presentation" identifier="card-view" id="7XM-Hu-zoW"/>
                     </connections>
@@ -107,17 +121,50 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-xA-QuI">
-                                <rect key="frame" x="136" y="71" width="333" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-41-Kd1">
                                 <rect key="frame" x="182" y="120" width="240" height="128"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-xA-QuI">
+                                <rect key="frame" x="136" y="71" width="333" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="333" id="kU0-Wv-tkK"/>
+                                    <constraint firstAttribute="height" constant="21" id="zUz-GN-bhn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kU0-Wv-tkK"/>
+                                        <exclude reference="zUz-GN-bhn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="118" y="55" width="333" height="21"/>
+                                    <mask key="constraints">
+                                        <include reference="kU0-Wv-tkK"/>
+                                        <include reference="zUz-GN-bhn"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vsx-xA-QuI" firstAttribute="centerX" secondItem="Uhv-Mc-KbH" secondAttribute="centerX" id="DaL-mb-tvY"/>
+                            <constraint firstItem="Vsx-xA-QuI" firstAttribute="top" secondItem="SCK-M4-5q1" secondAttribute="bottom" constant="11" id="XZh-tT-MAh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DaL-mb-tvY"/>
+                                <exclude reference="XZh-tT-MAh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="DaL-mb-tvY"/>
+                                <include reference="XZh-tT-MAh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

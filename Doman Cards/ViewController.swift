@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
 
     @IBOutlet weak var bttnAnimals: UIButton!
     @IBOutlet weak var bttnColor: UIButton!
+    @IBOutlet weak var bttnVeggie: UIButton!
     var str: String!
     
     //Chromecast vars
@@ -50,21 +51,18 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
         performSegueWithIdentifier("card-view", sender: self)
     }
     
+    @IBAction func bttnVeggie(sender: AnyObject) {
+        print(sender.currentTitle)
+        str = sender.currentTitle
+        performSegueWithIdentifier("card-view", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "card-view") {
             let svc = segue.destinationViewController as! Card_ViewController;
             svc.toPass = str
         }
     }
-    
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!, str:String) {
-        if (segue.identifier == "showCard") {
-            let svc = segue.destinationViewController as! Card_ViewController;
-            svc.toPass = "Colors"
-        }
-    }
-    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
