@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -10,8 +11,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Doman_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fhg-CB-rLq"/>
-                        <viewControllerLayoutGuide type="bottom" id="iPj-F8-Qh9"/>
+                        <viewControllerLayoutGuide type="top" id="rHH-dk-Kjz"/>
+                        <viewControllerLayoutGuide type="bottom" id="lI9-oX-Gir"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
@@ -29,58 +30,60 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-8c-YRf">
-                                <rect key="frame" x="218" y="44" width="300" height="300"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-LF-9vu" userLabel="bttnAnimals">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="JsB-39-Zdk"/>
-                                            <constraint firstAttribute="height" constant="100" id="uWv-bv-hij"/>
-                                        </constraints>
-                                        <state key="normal" title="Animals">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="bttnAnimals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA5-tL-bqm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gz-1Wm" userLabel="bttnFruits">
-                                        <rect key="frame" x="0.0" y="100" width="300" height="100"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="ieF-W9-qvW"/>
-                                        </constraints>
-                                        <state key="normal" title="Fruits">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="bttnColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZe-XC-9AL"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS3-gl-t32" userLabel="bttnVeggie">
-                                        <rect key="frame" x="0.0" y="200" width="300" height="100"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="gFd-QJ-hMd"/>
-                                        </constraints>
-                                        <state key="normal" title="Veggie">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="bttnVeggie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZB1-6k-uvp"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS3-gl-t32" userLabel="bttnVeggie">
+                                <rect key="frame" x="0.0" y="253" width="456" height="117"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="9dS-Op-ZkY"/>
+                                </constraints>
+                                <state key="normal" title="Veggie" backgroundImage="Avocado">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bttnVeggie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZB1-6k-uvp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gz-1Wm" userLabel="bttnFruits">
+                                <rect key="frame" x="0.0" y="44" width="456" height="211"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="211" id="CLa-BE-B5J"/>
+                                </constraints>
+                                <state key="normal" title="Fruits" backgroundImage="Banana">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bttnColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZe-XC-9AL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-LF-9vu" userLabel="bttnAnimals">
+                                <rect key="frame" x="524" y="44" width="212" height="211"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="CZ2-vX-vOk"/>
+                                </constraints>
+                                <state key="normal" title="Animals" backgroundImage="Elephant">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bttnAnimals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA5-tL-bqm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pPD-T2-njK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2cP-Lt-fT9"/>
-                            <constraint firstItem="pPD-T2-njK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2y8-ga-W7P"/>
-                            <constraint firstItem="pPD-T2-njK" firstAttribute="bottom" secondItem="1pm-8c-YRf" secondAttribute="top" id="g31-KJ-Ayd"/>
-                            <constraint firstAttribute="trailing" secondItem="pPD-T2-njK" secondAttribute="trailing" id="jIN-0a-Fmr"/>
+                            <constraint firstItem="HOb-Gz-1Wm" firstAttribute="bottom" secondItem="wsu-LF-9vu" secondAttribute="bottom" id="BT7-yH-lhK"/>
+                            <constraint firstAttribute="trailing" secondItem="pPD-T2-njK" secondAttribute="trailing" id="Fd0-j3-Y85"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="leading" secondItem="cS3-gl-t32" secondAttribute="leading" id="PMI-GQ-BBW"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="bottom" secondItem="wsu-LF-9vu" secondAttribute="top" id="S9t-eg-Kad"/>
+                            <constraint firstItem="HOb-Gz-1Wm" firstAttribute="top" secondItem="wsu-LF-9vu" secondAttribute="top" id="SZw-7G-za6"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ubg-ez-tXP"/>
+                            <constraint firstItem="HOb-Gz-1Wm" firstAttribute="trailing" secondItem="cS3-gl-t32" secondAttribute="trailing" id="WVf-ta-8nk"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XBC-jl-qPn"/>
+                            <constraint firstItem="wsu-LF-9vu" firstAttribute="leading" secondItem="HOb-Gz-1Wm" secondAttribute="trailing" constant="68" id="cCt-sQ-I3S"/>
+                            <constraint firstItem="HOb-Gz-1Wm" firstAttribute="leading" secondItem="pPD-T2-njK" secondAttribute="leading" id="chd-JO-n7k"/>
+                            <constraint firstItem="pPD-T2-njK" firstAttribute="trailing" secondItem="wsu-LF-9vu" secondAttribute="trailing" id="jHs-rA-f9S"/>
+                            <constraint firstItem="cS3-gl-t32" firstAttribute="bottom" secondItem="lI9-oX-Gir" secondAttribute="top" id="yKm-LU-XGp"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -95,21 +98,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277" y="419"/>
+            <point key="canvasLocation" x="277" y="418"/>
         </scene>
         <!--Card-view-->
         <scene sceneID="ecL-TL-jnA">
             <objects>
                 <viewController title="Card-view" id="kjZ-ha-xeS" customClass="Card_ViewController" customModule="Doman_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="el2-Yn-XuT"/>
-                        <viewControllerLayoutGuide type="bottom" id="W2v-6T-1pB"/>
+                        <viewControllerLayoutGuide type="top" id="lbW-Ha-mQ9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qmk-nN-DaP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uhv-Mc-KbH">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-M4-5q1">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-M4-5q1">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
                                 <items>
                                     <navigationItem title="Cards" id="wW1-tw-FCh" userLabel="navTitle">
@@ -121,50 +124,31 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-41-Kd1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-41-Kd1">
                                 <rect key="frame" x="182" y="120" width="240" height="128"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-xA-QuI">
-                                <rect key="frame" x="136" y="71" width="333" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="333" id="kU0-Wv-tkK"/>
-                                    <constraint firstAttribute="height" constant="21" id="zUz-GN-bhn"/>
+                                    <constraint firstAttribute="width" constant="240" id="0Wt-OS-j3N"/>
                                 </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-xA-QuI">
+                                <rect key="frame" x="118" y="55" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="kU0-Wv-tkK"/>
-                                        <exclude reference="zUz-GN-bhn"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="118" y="55" width="333" height="21"/>
-                                    <mask key="constraints">
-                                        <include reference="kU0-Wv-tkK"/>
-                                        <include reference="zUz-GN-bhn"/>
-                                    </mask>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Vsx-xA-QuI" firstAttribute="centerX" secondItem="Uhv-Mc-KbH" secondAttribute="centerX" id="DaL-mb-tvY"/>
-                            <constraint firstItem="Vsx-xA-QuI" firstAttribute="top" secondItem="SCK-M4-5q1" secondAttribute="bottom" constant="11" id="XZh-tT-MAh"/>
+                            <constraint firstItem="Vsx-xA-QuI" firstAttribute="top" secondItem="SCK-M4-5q1" secondAttribute="bottom" constant="11" id="597-49-orN"/>
+                            <constraint firstItem="Qmk-nN-DaP" firstAttribute="top" secondItem="yS2-41-Kd1" secondAttribute="bottom" constant="72" id="8Cn-jt-CfT"/>
+                            <constraint firstItem="yS2-41-Kd1" firstAttribute="leading" secondItem="Uhv-Mc-KbH" secondAttribute="leading" constant="182" id="XoN-a8-U4U"/>
+                            <constraint firstItem="SCK-M4-5q1" firstAttribute="leading" secondItem="Uhv-Mc-KbH" secondAttribute="leading" id="Ztc-fo-8st"/>
+                            <constraint firstAttribute="trailing" secondItem="SCK-M4-5q1" secondAttribute="trailing" id="i3V-3g-DA7"/>
+                            <constraint firstItem="Vsx-xA-QuI" firstAttribute="centerX" secondItem="SCK-M4-5q1" secondAttribute="centerX" id="teZ-2r-eOz"/>
+                            <constraint firstItem="yS2-41-Kd1" firstAttribute="top" secondItem="Vsx-xA-QuI" secondAttribute="bottom" constant="44" id="tez-Si-uex"/>
+                            <constraint firstItem="Vsx-xA-QuI" firstAttribute="leading" secondItem="Uhv-Mc-KbH" secondAttribute="leadingMargin" constant="98" id="xyT-FF-1hR"/>
+                            <constraint firstItem="SCK-M4-5q1" firstAttribute="top" secondItem="Uhv-Mc-KbH" secondAttribute="top" id="zdD-ll-k07"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="DaL-mb-tvY"/>
-                                <exclude reference="XZh-tT-MAh"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="constraints">
-                                <include reference="DaL-mb-tvY"/>
-                                <include reference="XZh-tT-MAh"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -176,10 +160,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSG-hi-1JD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961.99999999999989" y="-68.999999999999986"/>
+            <point key="canvasLocation" x="961.99999999999989" y="-68.999999999999972"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Avocado" width="1024" height="768"/>
+        <image name="Banana" width="1024" height="768"/>
+        <image name="Elephant" width="800" height="633"/>
         <image name="icon-cast-identified" width="24" height="24"/>
     </resources>
 </document>

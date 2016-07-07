@@ -20,7 +20,8 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     private let kDisconnectTitle = "Disconnect"
     // Publicly available receiver to demonstrate sending messages - replace this with your
     // own custom app ID.
-    private let kReceiverAppID = kGCKMediaDefaultReceiverApplicationID
+    private let kReceiverAppID = "9A2E07AD"
+    //"9A2E07AD"//"74F6413F"//kGCKMediaDefaultReceiverApplicationID
     private lazy var btnImage:UIImage = {
         return UIImage(named: "icon-cast-identified.png")!
     }()
@@ -29,7 +30,9 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     }()
     
     private lazy var textChannel:TextChannel = {
-        return TextChannel(namespace: "urn:x-cast:com.google.cast.sample.helloworld1")
+        //return TextChannel(namespace: "urn:x-cast:com.google.cast.sample.helloworld")
+        return TextChannel(namespace: "urn:x-cast:www.yourcourttennis.com/shop/1/yourcourttennis1.html")
+        //return TextChannel(namespace: "urn:x-cast:https://www.yourcourttennis.com/shop/1/yourcourttennis1.html")
     }()
     
     private var deviceScanner:GCKDeviceScanner?
