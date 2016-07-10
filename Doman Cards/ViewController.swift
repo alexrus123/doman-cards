@@ -20,8 +20,8 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     private let kDisconnectTitle = "Disconnect"
     // Publicly available receiver to demonstrate sending messages - replace this with your
     // own custom app ID.
-    private let kReceiverAppID = "9A2E07AD"
-    //"9A2E07AD"//"74F6413F"//kGCKMediaDefaultReceiverApplicationID
+    private let kReceiverAppID = "666B12A9"
+    //"9A2E07AD"//"666B12A9"//"74F6413F"//kGCKMediaDefaultReceiverApplicationID
     private lazy var btnImage:UIImage = {
         return UIImage(named: "icon-cast-identified.png")!
     }()
@@ -31,8 +31,7 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     
     private lazy var textChannel:TextChannel = {
         //return TextChannel(namespace: "urn:x-cast:com.google.cast.sample.helloworld")
-        return TextChannel(namespace: "urn:x-cast:www.yourcourttennis.com/shop/1/yourcourttennis1.html")
-        //return TextChannel(namespace: "urn:x-cast:https://www.yourcourttennis.com/shop/1/yourcourttennis1.html")
+        return TextChannel(namespace: "urn:x-cast:com.google.cast.qatsys")
     }()
     
     private var deviceScanner:GCKDeviceScanner?
@@ -220,6 +219,7 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
         launchedApplication: Bool) {
         print("Application has launched.");
         deviceManager.addChannel(self.textChannel)
+        print("------Post launch message.");
     }
     
     func deviceManager(deviceManager: GCKDeviceManager!,
