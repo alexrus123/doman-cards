@@ -69,6 +69,13 @@
                                     <action selector="bttnAnimals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oA5-tL-bqm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSi-X3-iHW">
+                                <rect key="frame" x="670" y="332" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sendText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acw-5u-Kxm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -82,7 +89,9 @@
                             <constraint firstItem="pPD-T2-njK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XBC-jl-qPn"/>
                             <constraint firstItem="wsu-LF-9vu" firstAttribute="leading" secondItem="HOb-Gz-1Wm" secondAttribute="trailing" constant="68" id="cCt-sQ-I3S"/>
                             <constraint firstItem="HOb-Gz-1Wm" firstAttribute="leading" secondItem="pPD-T2-njK" secondAttribute="leading" id="chd-JO-n7k"/>
+                            <constraint firstItem="lI9-oX-Gir" firstAttribute="top" secondItem="FSi-X3-iHW" secondAttribute="bottom" constant="8" symbolic="YES" id="hfF-Td-ZGx"/>
                             <constraint firstItem="pPD-T2-njK" firstAttribute="trailing" secondItem="wsu-LF-9vu" secondAttribute="trailing" id="jHs-rA-f9S"/>
+                            <constraint firstItem="FSi-X3-iHW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uLq-L4-dJE"/>
                             <constraint firstItem="cS3-gl-t32" firstAttribute="bottom" secondItem="lI9-oX-Gir" secondAttribute="top" id="yKm-LU-XGp"/>
                         </constraints>
                     </view>

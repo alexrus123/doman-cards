@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     @IBOutlet weak var bttnAnimals: UIButton!
     @IBOutlet weak var bttnColor: UIButton!
     @IBOutlet weak var bttnVeggie: UIButton!
+    @IBOutlet weak var sendText: UIButton!
     var str: String!
     
     //Chromecast vars
@@ -21,7 +22,7 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     // Publicly available receiver to demonstrate sending messages - replace this with your
     // own custom app ID.
     private let kReceiverAppID = "666B12A9"
-    //"9A2E07AD"//"666B12A9"//"74F6413F"//kGCKMediaDefaultReceiverApplicationID
+    //"74F6413F"//kGCKMediaDefaultReceiverApplicationID
     private lazy var btnImage:UIImage = {
         return UIImage(named: "icon-cast-identified.png")!
     }()
@@ -44,20 +45,48 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     @IBAction func bttnColor(sender: AnyObject) {
         print(sender.currentTitle)
         str = sender.currentTitle
+        textChannel.sendTextMessage(str)
         performSegueWithIdentifier("card-view", sender: self)
     }
     
     @IBAction func bttnAnimals(sender: AnyObject) {
         print(sender.currentTitle)
         str = sender.currentTitle
+        textChannel.sendTextMessage(str)
         performSegueWithIdentifier("card-view", sender: self)
     }
     
     @IBAction func bttnVeggie(sender: AnyObject) {
         print(sender.currentTitle)
         str = sender.currentTitle
+        textChannel.sendTextMessage(str)
         performSegueWithIdentifier("card-view", sender: self)
     }
+    
+    @IBAction func sendText(sender: AnyObject?) {
+        
+        if (!(self.deviceManager?.connectionState == GCKConnectionState.Connected)) {
+            let alert = UIAlertController(title: "Not Connected", message: "Please connect to a Cast device.", preferredStyle: UIAlertControllerStyle.Alert);
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                return;
+            }
+            /*
+            // [START custom-channel-2]
+            let textChannel = // [START_EXCLUDE]
+                self.textChannel
+            // [END_EXCLUDE]
+            let textMessage = // [START_EXCLUDE silent]
+                messageField.text
+            // [END_EXCLUDE]
+            // a String
+            */
+            textChannel.sendTextMessage("My message here YAY!!!")
+            // [END custom-channel-2]
+        //textChannel.sendTextMessage("YA LUBLYU NATASHENKU :)")
+    }
+    
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "card-view") {
@@ -127,6 +156,29 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
             }
         }
     }
+    
+    /*
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+        if let deviceScanner = deviceScanner {
+            deviceScanner.passiveScan = true
+            if (buttonIndex == actionSheet.cancelButtonIndex) {
+                return;
+            } else if (selectedDevice == nil) {
+                if (buttonIndex < deviceScanner.devices.count) {
+                    selectedDevice = deviceScanner.devices[buttonIndex] as? GCKDevice;
+                    print("Selected device: \(selectedDevice!.friendlyName)");
+                    connectToDevice();
+                }
+            } else if (actionSheet.buttonTitleAtIndex(buttonIndex) == kDisconnectTitle) {
+                // Disconnect button.
+                deviceManager!.leaveApplication();
+                deviceManager!.disconnect();
+                deviceDisconnected();
+                updateButtonStates();
+            }
+        }
+    }
+    */
     
     func updateButtonStates() {
         if (deviceScanner!.devices.count > 0) {
