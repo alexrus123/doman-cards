@@ -36,6 +36,7 @@
 		FEE6F7111D11213100319571 /* Doman_CardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F7101D11213100319571 /* Doman_CardsTests.swift */; };
 		FEE6F71C1D11213100319571 /* Doman_CardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F71B1D11213100319571 /* Doman_CardsUITests.swift */; };
 		FEE6F72A1D1134E800319571 /* Card-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6F7291D1134E800319571 /* Card-view.swift */; };
+		FEFB63F51D34CBAC000BC355 /* Chromecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB63F41D34CBAC000BC355 /* Chromecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		FEE6F71B1D11213100319571 /* Doman_CardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doman_CardsUITests.swift; sourceTree = "<group>"; };
 		FEE6F71D1D11213100319571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE6F7291D1134E800319571 /* Card-view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card-view.swift"; sourceTree = "<group>"; };
+		FEFB63F41D34CBAC000BC355 /* Chromecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chromecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				FE7746921D239F2F006C3D2C /* Veggie.swift */,
 				FE7746941D239F50006C3D2C /* Colors.swift */,
 				FE7746961D239F6C006C3D2C /* Utils.swift */,
+				FEFB63F41D34CBAC000BC355 /* Chromecast.swift */,
 			);
 			path = "Doman Cards";
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE7746911D23973C006C3D2C /* Fruits.swift in Sources */,
+				FEFB63F51D34CBAC000BC355 /* Chromecast.swift in Sources */,
 				FE7746951D239F50006C3D2C /* Colors.swift in Sources */,
 				FE3BE9F61D1FA0FD009BA589 /* TextChannel.swift in Sources */,
 				FE5466731D1E6ADD0090D938 /* ViewController.swift in Sources */,
