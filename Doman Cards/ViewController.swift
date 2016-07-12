@@ -136,26 +136,6 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
-        if let deviceScanner = deviceScanner {
-            deviceScanner.passiveScan = true
-            if (buttonIndex == actionSheet.cancelButtonIndex) {
-                return;
-            } else if (selectedDevice == nil) {
-                if (buttonIndex < deviceScanner.devices.count) {
-                    selectedDevice = deviceScanner.devices[buttonIndex] as? GCKDevice;
-                    print("Selected device: \(selectedDevice!.friendlyName)");
-                    connectToDevice();
-                }
-            } else if (actionSheet.buttonTitleAtIndex(buttonIndex) == kDisconnectTitle) {
-                // Disconnect button.
-                deviceManager!.leaveApplication();
-                deviceManager!.disconnect();
-                deviceDisconnected();
-                updateButtonStates();
-            }
-        }
-    }
     
     /*
     func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
