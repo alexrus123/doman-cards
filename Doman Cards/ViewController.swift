@@ -137,7 +137,7 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     }
     
     
-    /*
+
     func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
         if let deviceScanner = deviceScanner {
             deviceScanner.passiveScan = true
@@ -158,7 +158,7 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
             }
         }
     }
-    */
+    
     
     func updateButtonStates() {
         if (deviceScanner!.devices.count > 0) {
