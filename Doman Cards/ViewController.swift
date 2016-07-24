@@ -98,18 +98,7 @@ class ViewController: UIViewController, UIActionSheetDelegate, GCKDeviceManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        //Chromecast setup:
-        // Establish filter criteria.
-        let filterCriteria = GCKFilterCriteria(forAvailableApplicationWithID: kReceiverAppID)
-        
-        // Initialize device scanner.
-        deviceScanner = GCKDeviceScanner(filterCriteria: filterCriteria)
-        if let deviceScanner = deviceScanner {
-            deviceScanner.addListener(self)
-            deviceScanner.startScan()
-            deviceScanner.passiveScan = true
-        }
+        Chromecast().CCinit()
     }
     
     func connectToDevice() {
